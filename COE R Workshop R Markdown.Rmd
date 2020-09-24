@@ -9,6 +9,9 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
+
 ## Introduction to R Packages 
 ### Installing and Loading R Packages
 ```{r, eval = FALSE}
@@ -20,12 +23,24 @@ library(tidyverse)
 
 # check for a package update
 update.packages("tidyverse")
+
+# sometimes you may receive an error that a package is not availabe for your version of R
+
+# Installing Outdated Packages
+
+# remotes::install_version() allows to install an outdated version of a package automatically without having to manually download the archive.
+
+# here is an example
+# install_version("MplusAutomation", version = "0.7", lib = old_lib)
 ```
 
 ### Set Working Directory
 
 This will tell you where your files will be saved 
 ```{r setwd}
+# Wondering what your working directory is set at right now?
+
+getwd() # highlight this code and press ctrl+enter
 
 # to set your working directory you can use setwd("C:/FILE PATH")
 
@@ -37,7 +52,7 @@ This will tell you where your files will be saved
 ```
 
 ### Import Data into R
-```{r importData}
+```{r importData, eval= FALSE}
 
 # example od importing a .csv SPSS file
 
@@ -49,19 +64,25 @@ data1 <- read.csv("data.csv")
 # install.packages("haven")
 library(haven)
 data2 <- read_sav("data.sav")
+
+# view the top 6 rows with function head
+head(data2)
 ```
 
 ### Viewing your Data / Descriptive Statistics 
 
-```{r}
-# use package "skimr" to get the mean, standard deviation, histogram, and percentiles of numeric data
+```{r viewData, eval = FALSE}
+# use package "skimr" to get the mean, standard deviation, histogram, 
+# and percentiles of numeric data
+
 # install.packages("skimr")
 library(skimr)
 
 # use skim function to review data
 skim(data1)
 
-# use the package "psych" to get the mean, SD, range, min, max, median, skewness, and kurtosis of variables in dataset
+# use the package "psych" to get the mean, SD, range, min, max, median, 
+# skewness, and kurtosis of variables in dataset
 
 # install.packages("psych")
 library(psych)
@@ -72,42 +93,95 @@ describe(data1)
 
 ```
 
+### Ways of coding: so many ways!
+
+```{r coding, eval = FALSE}
+data2 <- data2 %>% 
+  rename(weight = wt) # tidyverse way of renaming a variable name
 
 
-### Useful R Packages
-```{r eval = FALSE}
-# data vizualization
-library(tidyverse)
-# APA Tables
-library(apaTables)
-library(sjPlot)
+data1$weight <- data1$wt # base R method for renaming a variable (adds a variable)
+```
+
+
+
+
+### Vizualizing Your Data: Basics 
+```{r dataViz}
+# We will use "ggplot2" to vizualize data 
+#install.packackges("ggplot2)
+library(ggplot2)
+
+# The package ggplot2 comes with a dataset called mtcars already loaded
+
+# Let's create a plot that decribes the relationship between engine size (displ) and 
+# the variable fuel efficiency (hwy).
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+# Do cars with bigger engines use more fuel? Look at the Plots on the left to see 
+# if you think these data support that hypothesis
+
+# here is a second example, which further divides the data by the type of vehicle (class) 
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+
+# Finally, you can also plot data in different facets or graphs by using something called facet_Wrap
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~class)
+
 
 ```
 
 
 
 
+### Useful R Packages
+```{r eval = FALSE}
+# data vizualization
+library(tidyverse)
+library(ggplot2)
+# APA Tables and Documents
+library(apaTables)
+library(sjPlot)
+library(papaja) # APA manuscripts
+# Others
+library(shiny) # interactive web applications 
+library(mice) # multiple imputation
+library(lme4) # multilevel modeling
+library(lavaan) # structural equation modeling 
+
+
+# if you would like to read about a package, you can simply use one ? followed by the package name
+
+# example of finding tidyverse documentation
+
+?tidyverse
+
+# Wondering about a function, use one ? followed by the function
+
+?distinct
+
+```
+
+
+
+## Freely Available R Resources 
+
+[Access free R tutorials here on DataCamp](https://www.datacamp.com/)
+
+Suggested DataCamp Tutorials
+
+
+* Introduction to R 
+* Exploratory Data Analysis in R 
+* Data Vizualization in R 
+
+
+## Review the workshop flow by clicking [here](https://uvastatlab.github.io/phdplus/intror.html#get_ready) (*credit to the University of Virginia Libraries*)
  
-
-
- 
- 
-
-a. Saving your data in the same folder as your project 
-
-b. Tibble and dataframes: uses and differences 
-
-https://r4ds.had.co.nz/tibbles.html 
-
-c. Tools to preview data, and summary statistics  
-
-https://learn.datacamp.com/courses/introduction-to-the-tidyverse  
-
-d. Hot keys: https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts 
-
- 
-
-G. Managing Data (For Advanced R users to move ahead) 
-
-https://learn.datacamp.com/courses/data-manipulation-with-dplyr 
 
