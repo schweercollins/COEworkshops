@@ -129,7 +129,7 @@ Camille walk through example of structured article and how she might set up the 
 
 ## Which evidence do I cite?
 
-![](img/pyramid.PNG)
+![](pyramid.PNG)
 
 ---
 
@@ -150,7 +150,7 @@ this is useful for literature review as you are building ideas, but also for sav
 ---
 
 # Journal Article Publishing Timeline
-![](img/timeline.JPG)
+![](timeline.JPG)
 ---
 
 # Formulating Research Questions and Topics
