@@ -1,0 +1,96 @@
+---
+title: "Intro to R"
+author: "<span style = 'font-size: 90%;'>Camille Cioffi, PhD & Maria Schweer-Collins, PhD</span>"
+institute: "<span style = 'font-size: 70%;'>University of Oregon</span>"
+date: "<span style = 'font-size: 70%;'>September 25, 2020</span>"
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "my-theme.css"]
+    lib_dir: libs
+    nature:
+      titleSlideClass: ["left","middle","inverse"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+
+class: center, middle
+
+![](img/coding.PNG)
+---
+class: inverse, center, middle
+
+# Introductions
+
+•	Name
+•	Pronouns
+•	Program
+•	Where you are zooming from/ if you moved
+•	Experience with R
+
+
+---
+
+# Instructions for downloading R and Workshop Materials
+
+Install the course materials from [Github](https://github.com/schweercollins/COEworkshops)
+
+- download data.csv; data.sav; COE R Workshop R Markdown
+
+Install R for windows [here](https://cran.r-project.org/bin/windows/base/)
+
+Install R for Mac [here](https://cran.r-project.org/bin/macosx/)
+
+Install Rstudio [here](https://rstudio.com/products/rstudio/download/)
+
+
+---
+
+# Introduction to R Packages 
+
+1. How to [install, load](https://rstudio-education.github.io/hopr/packages2.html), and [update](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages) 
+
+2. Commonly used and [useful packages](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
+
+---
+
+
+# Introduction to Workflow in R
+
+1. [R Projects](https://r4ds.had.co.nz/workflow-projects.html)
+
+2. [Scripts, markdown, and console: differences and uses](https://r4ds.had.co.nz/r-markdown.html)
+
+---
+
+# Loading and Viewing Data 
+
+1. Saving your data in the same folder as your project
+2. [Tibble and dataframes: uses and differences](https://r4ds.had.co.nz/tibbles.html)
+3. Tools to [preview data](https://learn.datacamp.com/courses/introduction-to-the-tidyverse)
+4. [Hot Keys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)
+
+---
+
+# Resources 
+
+![](img/google.PNG)
+
+- Google ->  Stack Exchange 
+- R Course Sequence in the College of Education 
+- Datacamp
+- [R Cheatsheets](https://rstudio.com/resources/cheatsheets/)

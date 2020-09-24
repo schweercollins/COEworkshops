@@ -1,5 +1,5 @@
 ---
-title: "COE R Workshop"
+title: "COE Intro to R Workshop"
 author: "Maria Schweer-Collins, PhD & Camille Cioffi, PhD"
 date: "Fall 2020"
 output: pdf_document
@@ -17,10 +17,64 @@ knitr::opts_chunk$set(echo = TRUE)
 install.packages("tidyverse")
 # each time you open a new R session, you have to load the package
 library(tidyverse)
+
+# check for a package update
+update.packages("tidyverse")
 ```
 
+### Set Working Directory
+
+This will tell you where your files will be saved 
+```{r setwd}
+
+# to set your working directory you can use setwd("C:/FILE PATH")
+
+# Example
+# setwd("C:/Users/jah2ax/Box Sync/_R/workshops/intro_to_R_spring_2019")
+
+
+
+```
+
+### Import Data into R
+```{r importData}
+
+# example od importing a .csv SPSS file
+
+data1 <- read.csv("data.csv")
+
+
+# example of importing a .sav file using package Haven
+# you can also import SAS and Stata files with Haven
+# install.packages("haven")
+library(haven)
+data2 <- read_sav("data.sav")
+```
+
+### Viewing your Data / Descriptive Statistics 
+
+```{r}
+# use package "skimr" to get the mean, standard deviation, histogram, and percentiles of numeric data
+# install.packages("skimr")
+library(skimr)
+
+# use skim function to review data
+skim(data1)
+
+# use the package "psych" to get the mean, SD, range, min, max, median, skewness, and kurtosis of variables in dataset
+
+# install.packages("psych")
+library(psych)
+
+#use describe function to review data
+describe(data1)
+
+
+```
+
+
+
 ### Useful R Packages
-<div class="fold s o">
 ```{r eval = FALSE}
 # data vizualization
 library(tidyverse)
@@ -29,26 +83,15 @@ library(apaTables)
 library(sjPlot)
 
 ```
-</div>
 
 
-D. Introduction to workflow (XX min) 
 
-a. R Projects 
-
-https://r4ds.had.co.nz/workflow-projects.html 
-
-b. Scripts, markdown, and console: differences and uses  
-
-https://r4ds.had.co.nz/r-markdown.html 
 
  
 
-**What if I already know how to use R Projects/Markdown? Review useful packages or move to Introduction to workflow 
 
  
-
-E. Loading and Viewing Data (XX min) 
+ 
 
 a. Saving your data in the same folder as your project 
 
