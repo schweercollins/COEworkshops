@@ -1,0 +1,70 @@
+---
+title: "COE R Workshop"
+author: "Maria Schweer-Collins, PhD & Camille Cioffi, PhD"
+date: "Fall 2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction to R Packages 
+### Installing and Loading R Packages
+```{r, eval = FALSE}
+# how to install R packages.
+# do this the first time you use the package
+install.packages("tidyverse")
+# each time you open a new R session, you have to load the package
+library(tidyverse)
+```
+
+### Useful R Packages
+<div class="fold s o">
+```{r eval = FALSE}
+# data vizualization
+library(tidyverse)
+# APA Tables
+library(apaTables)
+library(sjPlot)
+
+```
+</div>
+
+
+D. Introduction to workflow (XX min) 
+
+a. R Projects 
+
+https://r4ds.had.co.nz/workflow-projects.html 
+
+b. Scripts, markdown, and console: differences and uses  
+
+https://r4ds.had.co.nz/r-markdown.html 
+
+ 
+
+**What if I already know how to use R Projects/Markdown? Review useful packages or move to Introduction to workflow 
+
+ 
+
+E. Loading and Viewing Data (XX min) 
+
+a. Saving your data in the same folder as your project 
+
+b. Tibble and dataframes: uses and differences 
+
+https://r4ds.had.co.nz/tibbles.html 
+
+c. Tools to preview data, and summary statistics  
+
+https://learn.datacamp.com/courses/introduction-to-the-tidyverse  
+
+d. Hot keys: https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts 
+
+ 
+
+G. Managing Data (For Advanced R users to move ahead) 
+
+https://learn.datacamp.com/courses/data-manipulation-with-dplyr 
+
