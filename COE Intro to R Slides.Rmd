@@ -45,6 +45,19 @@ class: inverse, center, middle
 
 ---
 
+# Objectives for Today
+
+* Understand the advantages and disadvantages of R
+* Know where to look for help and to learn more about R
+* Orient yourself to R and RStudio
+* Understand the basics of working with data: load data, save data, create a simple plot
+* Learn some best practices for using R scripts, using data, and projects
+
+
+
+---
+
+
 # Instructions for downloading R and Workshop Materials
 
 Install the course materials from [Github](https://github.com/schweercollins/COEworkshops)
