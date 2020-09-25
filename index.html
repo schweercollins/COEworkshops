@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Intro to Scientific Writing and Publishing</title>
+    <title>Intro to R</title>
     <meta charset="utf-8" />
-    <meta name="author" content=" Camille Cioffi, PhD &amp; Maria Schweer-Collins, PhD" />
+    <meta name="author" content="Camille Cioffi, PhD &amp; Maria Schweer-Collins, PhD" />
     <meta name="date" content="2020-09-25" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="my-theme.css" type="text/css" />
@@ -12,8 +12,8 @@
     <textarea id="source">
 class: left, middle, inverse, title-slide
 
-# Intro to Scientific Writing and Publishing
-### <br><span style="font-size: 90%;">Camille Cioffi, PhD &amp; Maria Schweer-Collins, PhD</span>
+# Intro to R
+### <span style="font-size: 90%;">Camille Cioffi, PhD &amp; Maria Schweer-Collins, PhD</span>
 ### <span style="font-size: 70%;">University of Oregon</span>
 ### <span style="font-size: 70%;">September 25, 2020</span>
 
@@ -25,146 +25,85 @@ class: left, middle, inverse, title-slide
 
 
 
-
-
 class: center, middle
 
-# What is your biggest challenge or fear with academic writing?
-
-### [Let us know here](https://oregon.qualtrics.com/jfe/form/SV_06aIE9Gzad9jFch)
-
+![](img/coding.PNG)
 ---
 class: inverse, center, middle
 
-# What is academic writing?
+# Introductions
+
+•	Name
+•	Pronouns
+•	Program
+•	Where you are zooming from/ if you moved
+•	Experience with R
+
+
+---
+
+# Objectives for Today
+
+* Understand the advantages and disadvantages of R
+* Know where to look for help and to learn more about R
+* Orient yourself to R and RStudio
+* Understand the basics of working with data: load data, save data, create a simple plot
+* Learn some best practices for using R scripts, using data, and projects
 
 
 
 ---
 
-# Exercise 1
 
-1. Do a google search to identify an academic article in your field from the last 5 years.
+# Instructions for downloading R and Workshop Materials
 
-2. Identify the key components of each section (we will assign groups)
-* Abstract
-* Introduction
-* Method
-* Results
-* Discussion
+Install the course materials from [Github](https://github.com/schweercollins/COEworkshops)
 
-*Enter information [here](https://oregon.qualtrics.com/jfe/form/SV_6hB1Mlb0oGiPndH)*
+- download data.csv; data.sav; COE R Workshop R Markdown
 
+Install R for windows [here](https://cran.r-project.org/bin/windows/base/)
 
----
+Install R for Mac [here](https://cran.r-project.org/bin/macosx/)
 
-## Resources on Writing Well
-
-- [Writing Your Journal Article in Twelve Weeks](https://www.amazon.com/Writing-Journal-Twelve-Weeks-Second/dp/022649991X/ref=sr_1_1?dchild=1&amp;keywords=Writing+Your+Journal+Article+in+Twelve+Weeks%3A+A+Guide+to+Academic+Publishing+Success+%28second+edition%29&amp;qid=1600789341&amp;sr=8-1)
-- [The Only Academic Phrasebook You'll Ever Need: 600 Examples of Academic Language](https://www.amazon.com/Only-Academic-Phrasebook-Youll-Ever-ebook/dp/B01M0QFVHL/ref=sr_1_1_sspa?dchild=1&amp;keywords=the+only+academic+phrasebook&amp;qid=1600789375&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExUVdJQlI5UklGNUZZJmVuY3J5cHRlZElkPUEwMjU1MjI3Rlc3RUZPNjEwN01DJmVuY3J5cHRlZEFkSWQ9QTA3MDk0MDAzTlJXV0xSTVRVUTZUJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
-- [The Professor is In Website](http://theprofessorisin.com/)
-- [Free productivity/writing webinars](http://theprofessorisin.com/free-productivity-webinars/)
-- [How to Write a Lot](https://www.amazon.com/How-Write-Lot-Practical-Productive/dp/1433829738/ref=sr_1_2?dchild=1&amp;keywords=how+to+write+a+lot&amp;qid=1600789418&amp;sr=8-2)
-- [Writing Science: How to Write Papers That Get Cited and Proposals That Get Funded](https://www.amazon.com/Writing-Science-Papers-Proposals-Funded/dp/0199760241/ref=sr_1_4?dchild=1&amp;keywords=scientific+grant+writing&amp;qid=1600789452&amp;sr=8-4) 
-- [Bird by Bird](https://www.amazon.com/Bird-Some-Instructions-Writing-Life/dp/0385480016)
-- [Berkley Student Learning Center](https://slc.berkeley.edu/writing-worksheets-and-other-writing-resources/nine-basic-ways-improve-your-style-academic-writing)
-
-
-
-
-???
-Maria review benefits of each of these resources 
-
---
-
-***&lt;center&gt;"Writing is learned by imitation.&lt;br&gt; I learned to write mainly by reading writers who were doing the kind of writing I wanted to do and by trying to figure out how they did it."&lt;br&gt;&lt;br&gt;***
-
-&lt;center&gt;-William Zinsser in "Writing to Learn"&lt;/center&gt;
+Install Rstudio [here](https://rstudio.com/products/rstudio/download/)
 
 
 ---
 
-## Before you write, find an outlet for your work.
+# Introduction to R Packages 
 
+1. How to [install, load](https://rstudio-education.github.io/hopr/packages2.html), and [update](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages) 
 
---
-### Pick a target journal
-
-1. [Compare publishing policies of prospective journals](/https://transpose-publishing.github.io/#/)
-
-2. Identify the impact factor of prospective journals
-
-* [Psychology Journals](https://www.apa.org/pubs/journals/resources/impact-factors)
-* [Journal Citation Reports](https://www.scimagojr.com/journalrank.php?category=3304)
-
---
-
-### Info to find
-
-* Page limit
-* Citation limit
-* Citation style (APA and AMA are most common)
-* Time for first review and time to acceptance
-* Structure of article
-
-
-
-???
-Rationale
-Camille walk through example of structured article and how she might set up the formate 
-
-
+2. Commonly used and [useful packages](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
 
 ---
 
-# Referencing the Literature
 
-## Which evidence do I cite?
+# Introduction to Workflow in R
 
-&lt;img src="img/pyramid.PNG" width="800" /&gt;![](img/pyramid.PNG)
+1. [R Projects](https://r4ds.had.co.nz/workflow-projects.html)
 
----
-
-# Referencing the Literature cont.
-
-## Citation Management
-
-### Freely available open source options:
-
-* [Zotero](https://www.zotero.org/)
-
-* [Mendeley](https://www.mendeley.com/homepage-2-1?interaction_required=true&amp;adobe_mc_sdid=SDID%3D5923057BDC04CE44-76390FD3C0F10572%7CMCORGID%3D4D6368F454EC41940A4C98A6%40AdobeOrg%7CTS%3D1600788418&amp;adobe_mc_ref=https%3A%2F%2Fwww.google.com%2F)
-
-???
-this is useful for literature review as you are building ideas, but also for saving a lot of time in the long-term for reference management. Most have plug-ins for word to streamline referencing. 
-- Camille and Maria review pros/cons of each, could consider a screenshare
+2. [Scripts, markdown, and console: differences and uses](https://r4ds.had.co.nz/r-markdown.html)
 
 ---
 
-# Journal Article Publishing Timeline
-&lt;img src="img/timeline.png" width="800" /&gt;![](img/timeline.JPG)
----
+# Loading and Viewing Data 
 
-# Formulating Research Questions and Topics
-
-
-
-
-
----
-class: center, middle
-
-# Questions/Discussion
+1. Saving your data in the same folder as your project
+2. [Tibble and dataframes: uses and differences](https://r4ds.had.co.nz/tibbles.html)
+3. Tools to [preview data](https://learn.datacamp.com/courses/introduction-to-the-tidyverse)
+4. [Hot Keys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)
 
 ---
 
-class: left
+# Resources 
 
-# Contact Info
+![](img/google.PNG)
 
-### - Maria *mschweer@uoregon.edu*
-
-### - Camille *ccioffi@uoregon.edu*
+- Google -&gt;  Stack Exchange 
+- R Course Sequence in the College of Education 
+- Datacamp
+- [R Cheatsheets](https://rstudio.com/resources/cheatsheets/)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
